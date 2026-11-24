@@ -1,0 +1,28 @@
+domain_id: "base_electronics"
+description: "Базовые правила безопасности, антиспама и фильтрации для электроники"
+
+blacklisted_domains:
+  - "youtube.com"
+  - "youtu.be"
+  - "dzen.ru"
+  - "vk.com"
+  - "tiktok.com"
+
+trusted_marketplaces:
+  - "dns-shop.ru"
+  - "citilink.ru"
+  - "ozon.ru"
+  - "market.yandex.ru"
+  - "mvideo.ru"
+
+spam_regex_patterns:
+  - "(?i)промокод"
+  - "(?i)erid"
+  - "(?i)реферальн"
+  - "t\\.me/\\+"
+  - "(?i)скидка по ссылке"
+
+pricing_rules:
+  min_budget_ratio: 0.60  # Отсекаем аксессуары и мусор дешевле 60% бюджета
+  default_strategy: "BasicPriceStrategy"
+  disclaimer: "Цены носят индикативный характер (оценка по анонимной сессии). Итоговая стоимость зависит от вашей персональной скидки (СПП), оплаты картой площадки и региона доставки."

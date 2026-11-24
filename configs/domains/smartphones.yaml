@@ -1,0 +1,23 @@
+domain_id: "smartphones"
+extends: "_base_electronics.yaml"
+description: "Профиль пилотного домена: Смартфоны"
+
+trusted_forums:
+  - "4pda.to"
+  - "ixbt.com"
+  - "reddit.com"
+
+search_templates:
+  forum_research: 'site:{domain} "{model}" обсуждение покупка'
+  marketplace_price: 'site:{domain} "{model}" {memory_config}'
+
+sku_normalization_schema:
+  required_fields:
+    - "normalized_model"
+    - "ram_gb"
+    - "rom_gb"
+    - "region_version"
+    - "has_nfc"
+    - "is_accessory_or_refurb"
+
+extension_hooks: []  # Задел для подключения кастомных плагинов (Инкремент 6)
